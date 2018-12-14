@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Contact Page";
+}
+
+<div class="background" style="border-style:solid; border-color:white; color:white; margin: 100px; background-color:azure; border-radius:10px; padding:25px;  font-family: sans-serif; font-size: x-large;">
+    <h1 style="font-family: serif;"> visit us at:</h1>
+    <hr/>
+    <address>
+        77 New Road, Parsippany 07054
+    </address>
+    <br />
+    <div id="googleMap" style="height: 400px; width: 100%;"></div>
+    <script type="text/javascript">
+
+        function myMap() {
+            var myCenter = new google.maps.LatLng(20.296100, 85.824500);
+            var mapProp = { center: myCenter, zoom: 12, scrollwheel: false, draggable: true, mapTypeId: google.maps.MapTypeId.ROADMAP };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var marker = new google.maps.Marker({ position: myCenter });
+            marker.setMap(map);
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5K5C9XHGheAz_6OJyTD7leUnu6IxRZOE&callback=myMap"></script>
+   <h2 style="border-radius:10px;">Phone:</h2>
+    <hr />
+    If you liked our food and would like to support us, please follow us and leave us a review on Facebook, Google Yelp and Instagram.
+    <b>Hours:</b>
+    Monday – Thursday   11:00 – 10:00 PM<br />
+    Friday – Saturday   11:00 – 11:00 PM<br />
+    Sunday              12:00 – 9:00 PM<br />
+    <hr />
+    Please leave us your comments, suggestions or complaints at <a href="mailto:arachosiagrill@gmail.com">arachosiagrill@gmail.com</a>
+
+   <h2 style="border-radius:10px;">Catering page:</h2>
+    <hr />
+            Please call or email us for our special catering <a href="#">menu:</a>
+            <br/>
+             Call us at: 
+            <br/>
+             Email us at: arachosiagrill@gmail.com 
+             <br/>
+     <p style="font-family: serif; padding: 20px;"><a href="facebook/site"> <span class="fa fa-facebook" aria-hidden="true"></span> </a>  <a href="facebook/site"> <span class="fa fa-twitter" aria-hidden="true"></span> </a> <a href="facebook/site"> <span class="fa fa-yelp" aria-hidden="true"></span> </a></p>
+
+</div>

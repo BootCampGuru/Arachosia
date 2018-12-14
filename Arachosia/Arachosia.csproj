@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\main.jpg" />
+    <Content Remove="wwwroot\images\background.png" />
+    <Content Remove="wwwroot\images\kabob.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\images\main.jpg" />
+    <None Include="wwwroot\images\background.png" />
+    <None Include="wwwroot\images\kabob.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+</Project>
