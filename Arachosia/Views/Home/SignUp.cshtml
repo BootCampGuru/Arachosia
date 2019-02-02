@@ -1,0 +1,35 @@
+﻿@model Arachosia.Models.SignUp
+@{
+    Layout = "~/Views/Shared/_subLayout.cshtml";
+    ViewData["Title"] = "Arachosia - Afghan Cuisine";
+}
+<div align="center" style="margin-top:80px; background-color:white; border-radius: 10px;border-style:solid; border-color:brown;color:white;  border-radius:10px;" class="container">
+
+    <div style="color:white; font-family:'Comic Sans MS', 'serif'; font-size: x-large; padding:20px;" class="row">
+        <div style="color:brown; margin:20px;" align="left">
+
+            <span>We're just getting started. Be the first to know of upcoming deals, events, menu changes, and special offerings!</span>
+            <div align="left">
+                <img width="300" src="/images/aushak.jpg" class="img-responsive" />
+            </div>
+            <form asp-action="SignUp">
+                <div style="font-family: 'Comic Sans MS','serif'; font-size:x-large; color:brown; padding:20px;">
+
+                    <div class="row">
+                        <div class="col-md-2"><label>Email</label></div>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email", @maxlength = "100" })
+                    </div>
+                    <hr />
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-6">
+                        <input style="font-size:x-large" class="btn btn-primary" type="submit" value="Submit" />
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+

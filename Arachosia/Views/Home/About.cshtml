@@ -1,20 +1,27 @@
 ﻿@{
     ViewData["Title"] = "About us";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="background" style="border-style:solid; border-color:white;color:white; margin: 60px; background-color:azure; border-radius:10px;">
-    <p style="padding:40px; font-family: serif; font-size: x-large;">
-        At ARACHOSIA GRILL, We strive to bring you fresh, made-to-order dishes infused with Afghan authenticity, and prepared with carefully handpicked quality ingredients from food suppliers we trust. After all, happy taste buds make for a happy body and soul, even more so when they’re ignited by healthy, feel-good food.
+<div style="margin-top: 40px; border-radius: 10px;" class="container">
 
-        When life gives us lemons, we don’t just make lemonade - we make awesome salads, a yummy garlic mint sauce, a freshly blended hummus, a mouthwatering chicken marinade, and well, almost every other item on our menu too!
+@{
+    ViewData["Title"] = "Arachosia - Afghan Cuisine";
+}
+<div style="margin-top:0px;margin-bottom:20px; border-radius: 10px;border-style:solid; border-color:brown;color:black; background-color:white; border-radius:10px; padding:10px;" class="container">
+    <div class="col-md-8">
+        <p style="font-family:'Comic Sans MS', 'serif'; font-size: x-large; color:black;">
+            At ARACHOSIA GRILL, we prepare freshly made dishes infused with natural ingredients and Afghan authenticity. After all, healthy and savory food feeds the body and the soul.
 
-        We believe in honest harvest and genuine flavors. We use the best natural ingredients available to us because we want to serve you delicious, wholesome food, the traditional way, from custom blending spices to hand preparing vegetables.
+            When life gives us lemons, we don’t just make lemonade. We make awesome salads, a yummy garlic mint sauce, a freshly blended hummus, a mouthwatering chicken marinade, and well, almost every other item on our menu too! We know that what you eat defines you, and we like to define ourselves as Afghan gourmets with a strong appetite for life but without leaving a hole in your pockets.
 
-        We know that what you eat defines you, and we like to define ourselves as Afghan gourmets with a strong appetite for life but without leaving a hole in your pockets.
+            In case you are still wondering, Arachosia, pronounced as ARA-KHO-ZIA, is the ancient name for Kandahar, a city located in southern Afghanistan.
 
-        In case you are still wondering what is Arachosia and how it is pronounced:
-
-        Arachosia was an ancient name of the current city Kandahar located in southern Afghanistan. Arachosia is pronounced as ARA-KHO-ZIA.
-
-        Sign up to receive our Special promotions and coupons.
-    </p>
+            <a style="color:orange;" asp-area="" asp-controller="Home" asp-action="SignUp">Sign Up</a> to receive our Special promotions and coupons.
+        </p>
     </div>
+    <div class="col-md-4">
+        <img class="img-responsive" src="/images/curries.jpg"/>
+    </div>
+</div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -6,20 +6,131 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Sendgrid" Version="9.10.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\images\main.jpg" />
-    <Content Remove="wwwroot\images\background.png" />
     <Content Remove="wwwroot\images\kabob.jpg" />
+    <Content Remove="wwwroot\images\Dlhy7Xm.jpg" />
+    <Content Remove="wwwroot\images\main.jpg" />
+    <Content Remove="wwwroot\images\Arachosia One Page Menu_Page_1.jpg" />
+    <Content Remove="wwwroot\images\Arachosia One Page Menu_Page_2.jpg" />
+    <Content Remove="wwwroot\images\ArachosiaMenu1.jpg" />
+    <Content Remove="wwwroot\images\ArachosiaMenu2.jpg" />
+    <Content Remove="wwwroot\images\small version.png" />
+    <Content Remove="wwwroot\images\Aushak.jpg" />
+    <Content Remove="wwwroot\images\chickenkabob.jpg" />
+    <Content Remove="wwwroot\images\Curries.jpg" />
+    <Content Remove="wwwroot\images\aushak.jpg" />
+    <Content Remove="wwwroot\images\curries.jpg" />
+    <Content Remove="wwwroot\images\kabobhome.jpg" />
+    <Content Remove="wwwroot\images\kabobhome.jpg" />
+    <Content Remove="wwwroot\images\banner1.svg" />
+    <Content Remove="wwwroot\images\wrap.jpg" />
+    <Content Remove="wwwroot\images\wrap.jpg" />
+    <Content Remove="wwwroot\images\aushak.jpg" />
+    <Content Remove="wwwroot\images\chickenkabob.jpg" />
+    <Content Remove="wwwroot\images\background.png" />
+    <Content Remove="wwwroot\images\meal.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\images\main.jpg" />
-    <None Include="wwwroot\images\background.png" />
-    <None Include="wwwroot\images\kabob.jpg" />
+    <None Remove="Images\arachosia.jpg" />
+    <None Remove="Images\kabob.jpg" />
+    <None Remove="Images\ArachosiaMenu1.jpg" />
+    <None Remove="Images\ArachosiaMenu2.jpg" />
+    <None Remove="Images\arachosialogo.png" />
+    <None Remove="Images\aushak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\images\kabob.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\kabobhome.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\wrap.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\aushak.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\chickenkabob.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\meal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Images\" />
+    <Folder Include="PDF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\arachosia.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\kabob.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ArachosiaMenu1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
+    </Content>
+    <Content Include="Images\ArachosiaMenu2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\arachosialogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\aushak.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\images\main.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\ArachosiaMenu2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\aushak.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\chickenkabob.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\curries.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\kabobhome.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Home\Catering.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\wrap.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Images\arachosia.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\kabob.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\arachosialogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="PDF\OnePageMenu.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\chickenkabob.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\wrap.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

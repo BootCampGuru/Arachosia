@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - Arachosia</title>
+        <title>Arachosia Grill</title>
 
         <environment include="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -17,40 +17,48 @@
             <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         </environment>
     </head>
-    <body>
-        <nav style="padding:20px;" class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Arachosia</a>
-
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li style="font-size:x-large; font-family: serif;"><a asp-area="" asp-controller="Home" asp-action="Menu">Menu</a></li>
-                        <li style="font-size:x-large;font-family: serif;"><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                        <li style="font-size:x-large;font-family: serif;"><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                        <li style="margin-left:450px;font-size:x-large;font-family: serif; color: white; width:160px; border-color: white; border-width: thin; "><a class="btn btn-primary" style="border-color: white; border-width: thin; font-family: serif; font-size: x-large; color: white;" asp-area="" asp-controller="Home" asp-action="Contact">Order Online</a></li>
-                    </ul>
-                </div>
+    <body style="margin-bottom: 30px; background-image: url('/images/wrap.jpg')">
+        <div class="col-lg-12 row">
+            <div style="min-width:100px;">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img style="width:90px; height:90px; position: fixed; top:0px;" src="/images/arachosialogo.png" alt="Logo" class="img-responsive" /></a>
             </div>
-        </nav>
 
-        
+        </div>
+        <div class="row col-sm-12">
 
-        <div class="container body-content">
+                <nav style="padding:10px;  margin-left:23%; background-color:transparent; border-width:0px;" class="navbar navbar-inverse navbar-fixed-top">
+
+                        <div class="navbar-header">
+
+                            <button style="background-color:brown" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul style="margin-left:40%;background-color:brown; color:black;" class="nav navbar-nav">
+
+                                <li style="font-size:x-large; font-family: serif;"><a href="#about">About</a></li>
+                                <li style="font-size:x-large;font-family: serif;"><a href="#catering">Catering</a></li>
+                                <li style="font-size:x-large;font-family: serif;"><a href="#menu">Menu</a></li>
+                                <li style="font-size: x-large; font-family: serif;"><a href="#location">Locations</a></li>
+
+                            </ul>
+                        </div>
+
+                </nav>
+
+        </div>
+        <div align="center" style="margin-left:15%; margin-top:10px;" class="container body-content">
             @RenderBody()
 
-            <footer style="width:100%; margin-left:-220px;" align="center">
+            <footer style="width:100%; padding:20px;position: fixed;bottom: 0; left: 0;width: 100%;height: 60px;background: brown;color:white;font-size:24px; font-family: serif;" align="center">
 
-                
-                   <p style="font-family: serif; padding: 20px;">&copy; 2018 - Arachosia  <a href="facebook/site"> <span class="fa fa-facebook" aria-hidden="true"></span> </a>  <a href="facebook/site"> <span class="fa fa-twitter" aria-hidden="true"></span> </a> <a href="facebook/site"> <span class="fa fa-yelp" aria-hidden="true"></span> </a></p>
 
+                <p>&copy; 2018 - Arachosia  <a target="_blank" href="https://www.facebook.com/ArachosiaGrill/"> <span class="fa fa-facebook" aria-hidden="true"></span> </a> <a targert="_blank" href="http://www.twitter.com/Arachsoaigrill "> <span class="fa fa-twitter" aria-hidden="true"></span> </a></p>
 
             </footer>
         </div>
@@ -77,5 +85,36 @@
         </environment>
 
         @RenderSection("Scripts", required: false)
+
+       
+        <script>
+// Initialize and add the map
+            function initMap() {
+
+  // The location of Arachosia
+  var uluru = {lat: 40.8557485, lng: -74.3486487};
+  var address = "77 New Road, Parsippany 07054";
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 18, center: uluru,scrollwheel: false, title: address, draggable: true, mapTypeId: google.maps.MapTypeId.ROADMAP});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map, title: address});
+
+             var infowindow = new google.maps.InfoWindow(
+                { content: '<b>'+address+'</b>',
+                  size: new google.maps.Size(150,50)
+                });
+
+            infowindow.open(map,marker);
+                       marker.addListener('click', function() {
+                        window.location.href = "https://wego.here.com/directions/mix//Arachosia-Grill,-77-New-RD,-07054-Parsippany:e-eyJuYW1lIjoiQXJhY2hvc2lhIEdyaWxsIiwiYWRkcmVzcyI6Ijc3IE5ldyBSRCwgUGFyc2lwcGFueSwgTmV3IEplcnNleSAwNzA1NCIsImxhdGl0dWRlIjo0MC44NTcwMSwibG9uZ2l0dWRlIjotNzQuMzQ4NDYsInByb3ZpZGVyTmFtZSI6ImZhY2Vib29rIiwicHJvdmlkZXJJZCI6MzU2MjgyMDk1MTQ4MzgyfQ==?map=40.85701,-74.34846,15,normal&fb_locale=en_US";
+
+        });
+            }
+
+
+        </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1slowjVinffaG9HIQOPGRbDBeTe5aZvI&callback=initMap">
+    </script>
     </body>
 </html>
